@@ -89,7 +89,7 @@ TF_LITE_MICRO_TEST(TestInvoke) {
   /* input 포인터가 nullptr이 아닌지 확인하세요. */
   TF_LITE_MICRO_EXPECT_NE(?, ?);
   /* input tensor의 dims size가 4인지 확인하세요. */
-  TF_LITE_MICRO_EXPECT_EQ(?, ?;
+  TF_LITE_MICRO_EXPECT_EQ(?, ?);
   TF_LITE_MICRO_EXPECT_EQ(1, input->dims->data[0]);
   TF_LITE_MICRO_EXPECT_EQ(kNumRows, input->dims->data[1]);
   TF_LITE_MICRO_EXPECT_EQ(kNumCols, input->dims->data[2]);
@@ -156,9 +156,9 @@ TF_LITE_MICRO_TEST(TestInvoke) {
   TF_LITE_MICRO_EXPECT_EQ(kTfLiteInt8, output->type);
 
   /* person_score를 output->data.int8[kPersonIndex]에서 받아오세요. */
-  person_score = output->data.int8[kPersonIndex];
+  person_score = ?->?.?[?];
   /* no_person_score를 output->data.int8[kNotAPersonIndex]에서 받아오세요. */
-  no_person_score = output->data.int8[kNotAPersonIndex];
+  no_person_score = ?->?.?[?];
   TF_LITE_REPORT_ERROR(
       &micro_error_reporter,
       "no person data.  person score: %d, no person score: %d\n", person_score,
@@ -166,7 +166,7 @@ TF_LITE_MICRO_TEST(TestInvoke) {
   
   // Make sure that the expected "No Person" score is higher.
   /* no_person_score가 person_score보다 높은지 확인하세요. */
-  TF_LITE_MICRO_EXPECT_GT(no_person_score, person_score);
+  TF_LITE_MICRO_EXPECT_?(?, ?);
 
   TF_LITE_REPORT_ERROR(&micro_error_reporter, "Ran successfully\n");
 }
