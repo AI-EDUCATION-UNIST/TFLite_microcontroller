@@ -60,7 +60,7 @@ TF_LITE_MICRO_TEST(TestInvoke) {
   // needed by this graph.
 
   /* MicroMutableOpResolver 인스턴스를 만들고, 모델 수행에 필요한 아래 5개의 operation을 추가합니다 */
-  /* AddAveragePool2D, AddConv2D, AddDepthwiseConv2D, AddReshape, AddSoftma */
+  /* AddAveragePool2D, AddConv2D, AddDepthwiseConv2D, AddReshape, AddSoftmax */
   tflite::?<5> ?;
   micro_op_resolver.?;
   micro_op_resolver.?;
@@ -82,7 +82,7 @@ TF_LITE_MICRO_TEST(TestInvoke) {
   interpreter.?;
 
   // Get information about the memory area to use for the model's input.
-  /* interpreter의 input 멤버의 0번째 eleement를 통해 input tensor의 포인터를 받아오세요. */
+  /* interpreter의 input 멤버의 0번째 element를 통해 input tensor의 포인터를 받아오세요. */
   TfLiteTensor* input = ?.?(?);
 
   // Make sure the input has the properties we expect.
