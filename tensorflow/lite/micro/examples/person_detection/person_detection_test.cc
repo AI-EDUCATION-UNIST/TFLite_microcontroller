@@ -103,7 +103,7 @@ TF_LITE_MICRO_TEST(TestInvoke) {
   memcpy(?, ?, ?);
 
   // Run the model on this input and make sure it succeeds.
-  /* interpreter의 invoke()를 호출하여 모델을 실행하세요. */
+  /* interpreter의 Invoke()를 호출하여 모델을 실행하세요. */
   TfLiteStatus invoke_status = ?.?();
   if (invoke_status != kTfLiteOk) {
     TF_LITE_REPORT_ERROR(&micro_error_reporter, "Invoke failed\n");
@@ -137,7 +137,7 @@ TF_LITE_MICRO_TEST(TestInvoke) {
   memcpy(?, ?, ?);
 
   // Run the model on this "No Person" input.
-  /* interpreter의 invoke()를 호출하여 모델을 실행하세요. */
+  /* interpreter의 Invoke()를 호출하여 모델을 실행하세요. */
   invoke_status = ?.?();
   if (invoke_status != kTfLiteOk) {
     TF_LITE_REPORT_ERROR(&micro_error_reporter, "Invoke failed\n");
